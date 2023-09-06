@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css" />
+    <title>CRUD App</title>
+</head>
+
+<body>
+  <header>
+      <h1>Artists</h1>
+        <article id="header-nav">
+          <button class="button-header" id="display-all-artists">Show all artists</button>
+          <button class="button-header" id="display-favorite-artists">Show favorite artists</button>
+          <div></div>
+          <select id="label-dropdown" class="custom-dropdown"></select>
+        </article>
+  </header>
+  <main>
+    <section id="artist-grid" class="grid-container"></section>
+    <form id="form-create">
+      <h2>Create Artist</h2>
+      <input type="text" name="name" placeholder="Type user name" required>
+      <input type="text" name="birthdate" placeholder="Type user birthdate" required>
+      <input type="text" name="activeSince" placeholder="Type user activeSince" required>
+      <input type="text" name="genres" placeholder="Type user genres (comma-separated)" required>
+      <input type="text" name="labels" placeholder="Type user labels (comma-separated)" required>
+      <input type="url" name="website" placeholder="Paste user website URL" required>
+      <input type="url" name="image" placeholder="Paste user image URL" required>
+      <input type="text" name="shortDescription" placeholder="Type user short description" required>
+      <button>Create Artist</button>
+    </form>
+  
+    <form id="form-update">
+      <h2>Update Artist</h2>
+      <input type="text" name="name" placeholder="Type new user name" required>
+      <input type="text" name="birthdate" placeholder="Type new user birthdate" required>
+      <input type="text" name="activeSince" placeholder="Type new user activeSince" required>
+      <input type="text" name="genres" placeholder="Type new user genres (comma-separated)" required>
+      <input type="text" name="labels" placeholder="Type new user labels (comma-separated)" required>
+      <input type="url" name="website" placeholder="Paste new user website URL" required>
+      <input type="url" name="image" placeholder="Paste new user image URL" required>
+      <input type="text" name="shortDescription" placeholder="Type new user short description" required>
+      <button>Update Artist</button>
+     </form>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
