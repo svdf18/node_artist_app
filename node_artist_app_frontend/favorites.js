@@ -1,4 +1,4 @@
-import { updateArtistGrid, endpoint } from "/app.js"
+import { updateArtistGrid, endpoint } from "/node_artist_app_frontend/app.js"
 
 const dummyUser = "user123";
 

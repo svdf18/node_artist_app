@@ -1,5 +1,5 @@
-import { toggleFavorite, getFavoriteArtistIds } from "/favorites.js"
-import { scrollToTop, populateLabelDropdown } from "/helpers.js";
+import { toggleFavorite, getFavoriteArtistIds } from "/node_artist_app_frontend/favorites.js"
+import { scrollToTop, populateLabelDropdown } from "/node_artist_app_frontend/helpers.js";
 
 const endpoint = "http://localhost:3000";
 let selectedArtist;

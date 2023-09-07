@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "008ee388-6c98-477d-9459-46fd95b27e91",
 		"name": "artists-opgave",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "29402914"
 	},
 	"item": [
@@ -10,15 +10,26 @@
 			"name": "get all artists",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:3000/artists"
 			},
 			"response": []
 		},
 		{
 			"name": "post artist",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"id\": 777,\n    \"name\": \"µ-Ziq\",\n    \"birthdate\": \"June 4, 1971\",\n    \"activeSince\": \"1990s\",\n    \"genres\": [\"IDM\", \"Ambient\", \"Breakbeat\"],\n    \"labels\": [\"Planet Mu\", \"Rephlex\"],\n    \"website\": \"\",\n    \"image\": \"\",\n    \"shortDescription\": \"µ-Ziq, pronounced 'music,' is the moniker of British electronic musician Mike Paradinas. He is known for his eclectic blend of IDM, ambient, and breakbeat and is associated with Planet Mu and Rephlex labels.\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/artists"
 			},
 			"response": []
 		},
@@ -26,23 +37,35 @@
 			"name": "get artist by id",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": "http://localhost:3000/artists/22"
 			},
 			"response": []
 		},
 		{
 			"name": "put artist",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"id\": 34,\n    \"name\": \"Aphex Twin\",\n    \"birthdate\": \"August 18, 1971\",\n    \"activeSince\": \"1980s\",\n    \"genres\": [\"IDM\", \"Ambient\", \"Electronica\"],\n    \"labels\": [\"Warp Records\", \"Rephlex\"],\n    \"website\": \"\",\n    \"image\": \"\",\n    \"shortDescription\": \"Aphex Twin, aka Richard D. James, is an influential British electronic musician. His pioneering work in electronic music spans various genres, from ambient to experimental.\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/artists/"
 			},
 			"response": []
 		},
 		{
 			"name": "delete artist by id",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:3000/artists/pleaseuseIDoflatestgeneratedartist"
 			},
 			"response": []
 		},
@@ -51,18 +74,43 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/favorites/user123",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"favorites",
-						"user123"
-					]
-				}
+				"url": "http://localhost:3000/favorites/user123"
+			},
+			"response": []
+		},
+		{
+			"name": "delete favorite by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"artistId\":43}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/favorites/user123"
+			},
+			"response": []
+		},
+		{
+			"name": "post favorite to user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"artistId\":43}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/favorites/user123"
 			},
 			"response": []
 		}
